@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int [] vectorEntrada = {0, 2, 1, 65, 66, 78, 12, 11, 90, 13, -8};
+        int sumaPares = 0, num = 0;
+        long factorial = 0;
+        double promedio = 0;
+         //Exersise 1
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("> Digite un numero: ");
+        num = scanner.nextInt();
+        factorial = Exercise1.factorial(num);
+        System.out.println("* El factorial es: " + factorial);
+        // Exersise 2
+        sumaPares = Ejercicio2.sumaPares(vectorEntrada);
+        System.out.println("* Suma de pares positivos: " + sumaPares);
+         //Exersise 3
+        promedio = Exercise3.mediaAritmetica(vectorEntrada);
+        System.out.println("* El promedio es de: " + promedio);
+    }
+}
+
+public class Exercise1 {
+    public static long factorial (int num){ 
+        
+        long factorNum = 1;
+        for (int i = 1; i <= num; i++) {
+            factorNum *= i;
+        }
+        return factorNum;
+    }
+}
+
+public class Ejercicio2 {
+    public static int sumaPares (int [] vector){
+        int s = 0;
+        for (int num : vector){
+            if ((num % 2 == 0) && (num > 0)){
+                s += num;
+            }
+        }
+        return s;
+    }
+}
+
+public class Exercise3 {
+    public static double mediaAritmetica(int [] vector){
+        double promedio = 0;
+        for (int num : vector){
+            promedio += num;
+        }
+        return promedio / vector.length;
+    }
+}
