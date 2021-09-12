@@ -55,6 +55,8 @@ public class Exercise3 {
     }
 }
 
+package com.misiontic.factor
+
 public class Factorizar {
     public static void main (String [] args) {
 	int numero = 5;
